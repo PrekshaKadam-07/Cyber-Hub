@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Hub | About</title>
+
+    <style>
+
+        /* =========================
+           ABOUT PAGE
+        ========================= */
+
+        body {
+            margin: 0;
+            background-color: #3f3a3c;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* LOGO */
+
+        header {
+            padding: 20px 25px;
+        }
+
+        .logo img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+
+        /* HERO SECTION */
+
+        .about-hero {
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto 60px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: #f5d34e;
+            font-size: 16px;
+            font-weight: bold;
+            
+        }
+
+        .about-hero h1 {
+            font-size: 40px;
+            margin: 0  30px;
+            color: #f5d34e;
+            margin-top: 45px auto 35px;
+        }
+
+        .about-hero h3 {
+            font-size: 25px;
+            margin: 15px 0;
+            color: #eeeeee;
+        }
+
+        .about-hero p {
+            color: #eeeeee;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        /* WHY CYBER-HUB */
+        .about-section {
+            width: 85%;
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+
+        .about-section h2 {
+            text-align: center;
+            color: #f5d34e;
+            font-size: 30px;
+            margin-bottom: 25px;
+            
+        }
+
+        .about-section > p {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            color: #eeeeee;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* PURPOSE CARDS */
+        .purpose-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .purpose-card {
+            background-color: white;
+            color: #222;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            min-height: 180px;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(245, 211, 78, 0.25);
+        }
+
+        .purpose-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .purpose-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .purpose-card p {
+            color: #555;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+
+        /* GOAL SECTION */
+
+        .goal-section {
+            width: 80%;
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 40px;
+            background-color: white;
+            color: #222;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .goal-section h2 {
+            color: #222;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .goal-section p {
+            color: #555;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* CLOSING */
+
+        .about-ending {
+            text-align: center;
+            margin: 70px auto;
+        }
+
+        .about-ending h2 {
+            color: #f5d34e;
+            font-size: 30px;
+        }
+
+        .about-ending p {
+            color: #dddddd;
+            font-size: 17px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            .purpose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 35px;
+            }
+
+            .about-hero p {
+                font-size: 16px;
+            }
+
+            .goal-section {
+                width: 75%;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            <img src="images/logo1.png" alt="Cyber-Hub Logo">
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="about-hero">
+
+            <h1 class="section-label">
+                ABOUT CYBER-HUB
+            </h1>
+
+            <h3>
+                Why Cyber-Hub Was Created
+            </h3>
+
+            <p>
+                Cyber-Hub is a cybersecurity awareness website
+                created to help students and everyday internet
+                users understand cyber threats and learn how to
+                stay safer online.
+            </p>
+
+        </section>
+
+
+        <!-- WHY CYBERSECURITY -->
+
+        <section class="about-section">
+
+            <h2>
+                Why Cybersecurity Matters
+            </h2>
+
+            <p>
+                The internet has become an important part of
+                everyday life. We use it for communication,
+                education, banking, shopping and entertainment.
+                However, increased online activity also brings
+                risks such as phishing, malware, scams,
+                identity theft and other cyber threats.
+            </p>
+
+        </section>
+
+
+        <!-- PURPOSE -->
+
+        <section class="about-section">
+
+            <h2>
+                What Cyber-Hub Offers
+            </h2>
+
+            <div class="purpose-grid">
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Threat Awareness
+                    </h3>
+
+                    <p>
+                        Learn about common cyber threats,
+                        how they work and how attackers
+                        may target users.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        🔐
+                    </div>
+
+                    <h3>
+                        Online Safety
+                    </h3>
+
+                    <p>
+                        Discover practical safety measures
+                        that can help protect your accounts,
+                        devices and personal information.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Interactive Learning
+                    </h3>
+
+                    <p>
+                        Test your cybersecurity knowledge
+                        through interactive quizzes and
+                        different difficulty levels.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        💼
+                    </div>
+
+                    <h3>
+                        Career Awareness
+                    </h3>
+
+                    <p>
+                        Explore different cybersecurity
+                        careers and learn about the skills
+                        required for each field.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        Simple Information
+                    </h3>
+
+                    <p>
+                        Understand cybersecurity concepts
+                        through simple explanations designed
+                        for students and beginners.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-card">
+
+                    <div class="purpose-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Safer Digital World
+                    </h3>
+
+                    <p>
+                        Encourage responsible digital
+                        habits and help users make safer
+                        decisions online.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GOAL -->
+
+        <section class="goal-section">
+
+            <h2>
+                Our Goal
+            </h2>
+
+            <p>
+                The goal of Cyber-Hub is to make cybersecurity
+                easier to understand and more accessible to
+                everyone. Instead of learning about cyber
+                threats only after becoming a victim, users
+                should have the knowledge to recognize risks
+                and take preventive action.
+            </p>
+
+            <p>
+                Cyber-Hub brings awareness, safety tips,
+                interactive learning and career information
+                together in one place.
+            </p>
+
+        </section>
+
+
+        <!-- ENDING -->
+
+        <section class="about-ending">
+
+            <h2>
+                Stay Safe · Stay Aware
+            </h2>
+
+            <p>
+                A little cybersecurity awareness can make
+                a big difference.
+            </p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

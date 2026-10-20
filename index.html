@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber-Hub</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #3f3c3c;
+            color: #ffffff;;
+        }
+        header{
+            height: 70px;
+            text-align: right;
+            margin-top: 10px;
+            display: flex;
+            padding: 10px 30px;
+            justify-content: space-between;
+        }
+
+        header img{
+           
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-left: 12px;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ddc040;
+        }
+        
+            
+        /* Main hero layout */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+
+            max-width: 1500px;
+            width: 100%;
+            min-height: calc(100vh - 100px);
+
+            margin: 0 auto;
+            padding: 50px 5%;
+            box-sizing: border-box;
+        }
+
+        /* Left text section */
+        .hero-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .hero-content h1 {
+            color: #f5d34e;
+            font-size: clamp(30px, 3.5vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        /* Start Learning button */
+        .hero-btn {
+            display: inline-block;
+            background-color: #f5d34e;
+            color: #25282c;
+
+            padding: 13px 24px;
+            border-radius: 8px;
+
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+     
+
+        /* Right video section */
+        .hero-video {
+            width: 48%;
+            max-width: 650px;
+        }
+
+        .hero-video video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 0 35px rgba(245, 211, 78, 0.15);
+        }
+
+        a{
+            padding-top: 30px;
+            font-size: 20px;
+            color:  #e2c648;
+        }
+        a:hover{
+            
+            color: #ffffff;
+        }
+        .hero-video {
+            flex: 1;
+            min-width: 0;
+        }
+        .hero-video video {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    </style>
+    
+    <header>
+        <div class="logo">
+        <img src="images/logo1.png"> 
+    </div>
+
+     <nav>
+        <a href="index.html">Home</a>
+        <a href="threats.html">Threats</a>
+        <a href="safety.html">Safety</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="careers.html">Careers</a>
+        <a href="about.html">About</a>
+    </nav>
+    </header>
+
+<section class="hero">
+     <div class="hero-content">
+        <h1> Learn how to protect yourself from cyber threats.</h1>
+
+        <h3>Stay Safe. Stay Aware.</h3>
+        <a href="threats.html" class="hero-btn">
+            Start Learning
+        </a>
+    </div>
+
+    
+    <div class="hero-video">
+    <video autoplay muted loop playsinline>
+        <source src="videos/cybersecurity.mp4" type="video/mp4">
+        Your browser does not support video playback.
+    </video>
+    </div>
+</section>
+</body>
+</html>

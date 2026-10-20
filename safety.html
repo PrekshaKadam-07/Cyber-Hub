@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety-Details</title>
+</head>
+<body>
+<style>
+    body {
+    background-color: #3f3c3c;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+header img{
+           
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-left: 12px;
+}
+
+.page-title {
+    text-align: center;
+    color: #f5d34e;
+    font-size: 40px;
+    margin-top: 40px;
+    
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.safety-grid {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.safety-card {
+    background-color: white;
+    color: #222;
+    padding: 25px;
+    min-height: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.safety-card:hover {
+    transform: translateY(-8px);
+}
+
+.safety-icon {
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.safety-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.safety-card ul {
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.more-info {
+    margin-top: auto;
+    padding: 11px 16px;
+    background-color: #f5d34e;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.more-info:hover {
+    background-color: #222;
+    color: #f5d34e;
+}
+</style>
+
+ <!--Logo-->
+    <header>
+
+        <div class="logo">
+            <img src="images/logo1.png" alt="Cyber-Hub Logo">
+        </div>
+
+    </header>
+
+<h2 class="page-title">🛡️ Safety Measures</h2>
+
+<h2 class="page-subtitle">
+    Simple ways to protect yourself from common cyber threats.
+</h2>
+
+<div class="safety-grid">
+
+    <!-- PHISHING -->
+    <div class="safety-card" id="phishing">
+        <div class="safety-icon">🎣</div>
+
+        <h2>Phishing</h2>
+
+        <ul>
+            <li>Verify the sender before responding.</li>
+            <li>Don't click suspicious links or attachments.</li>
+            <li>Never share OTPs, passwords, or PINs.</li>
+            <li>Check the website URL carefully.</li>
+            <li>Report suspicious messages.</li>
+        </ul>
+
+        <a href="https://www.geeksforgeeks.org/computer-networks/phishing-attack/" target="_blank" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- MALWARE -->
+    <div class="safety-card" id="malware">
+        <div class="safety-icon">🦠</div>
+
+        <h2>Malware</h2>
+
+        <ul>
+           <li>Keep your operating system and apps updated.</li>
+           <li>Use trusted antivirus/security software.</li>
+           <li>Download software only from trusted sources.</li>
+           <li>Don't open unknown attachments.</li>
+           <li>Scan external USB drives before using them.</li>
+        </ul>
+
+        <a href="https://www.geeksforgeeks.org/ethical-hacking/malware-and-its-types/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- RANSOMWARE -->
+    <div class="safety-card" id="ransomware">
+        <div class="safety-icon">🔒</div>
+
+        <h2>Ransomware</h2>
+
+        <ul>
+            <li>Keep regular backups of important files.</li>
+            <li>Keep software and security tools updated.</li>
+            <li>Avoid suspicious links and attachments.</li>
+            <li>Use strong passwords and MFA.</li>
+            <li>Don't install software from unknown sources.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/computer-networks/ransomware-explained-how-it-works-and-how-to-prevent-it/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- SOCIAL ENGINEERING -->
+    <div class="safety-card" id="social">
+        <div class="safety-icon">👤</div>
+
+        <h2>Social Engineering</h2>
+
+        <ul>
+            <li>Be careful with unexpected requests.</li>
+            <li>Verify someone's identity before sharing information.</li>
+            <li>Never reveal confidential information under pressure.</li>
+            <li>Keep personal information private.</li>
+            <li>Take time to think before acting on urgent requests.</li>
+        </ul>
+
+        <a href="https://www.geeksforgeeks.org/cybersecurity/social-engineering-the-art-of-virtual-exploitation/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- PASSWORD ATTACKS -->
+    <div class="safety-card" id="password-attacks">
+        <div class="safety-icon">🔑</div>
+
+        <h2>Password Attacks</h2>
+
+        <ul>
+            <li>Use long, unique passwords.</li>
+            <li>Never reuse the same password everywhere.</li>
+            <li>Use a password manager.</li>
+            <li>Enable multi-factor authentication (MFA).</li>
+            <li>Never share your passwords with others</li>
+        </ul>
+    <a href="https://www.geeksforgeeks.org/cybersecurity/introduction-to-password-attacks-ethical-hacking/" class="more-info"> More Information →</a>
+        
+    </div>
+
+
+    <!-- ONLINE SCAMS -->
+    <div class="safety-card" id="online">
+        <div class="safety-icon">💳</div>
+
+        <h2>Online Scams</h2>
+
+        <ul>
+            <li>Verify offers before making payments.</li>
+            <li>Don't trust "too good to be true" deals.</li>
+            <li>Avoid sending money to unknown people.</li>
+            <li>Never share OTPs, PINs, or banking details.</li>
+            <li>Use trusted websites and payment platforms.</li>
+        </ul>
+    <a href="https://www.geeksforgeeks.org/techtips/how-to-avoid-internet-scams/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- UNSAFE BROWSING -->
+    <div class="safety-card" id="unsafe">
+        <div class="safety-icon">🌐</div>
+
+        <h2>Unsafe Browsing</h2>
+
+        <ul>
+            <li>Check for HTTPS before entering sensitive information.</li>
+            <li>Avoid suspicious websites and pop-ups.</li>
+            <li>Don't download files from unknown websites.</li>
+            <li>Keep your browser updated.</li>
+            <li>Use browser security and privacy settings.</li>
+        </ul>
+        <a href="https://www.geeksforgeeks.org/ethical-hacking/what-are-browser-vulnerabilities-and-how-to-stay-protected/" class="more-info"> More Information →</a>
+       
+    </div>
+
+
+    <!-- MOBILE SECURITY -->
+    <div class="safety-card" id="mobile">
+        <div class="safety-icon">📱</div>
+
+        <h2>Mobile Security</h2>
+
+        <ul>
+            <li>Lock your phone with a strong PIN/password.</li>
+            <li>Install apps only from official app stores.</li>
+            <li>Review app permissions regularly.</li>
+            <li>Keep your phone and apps updated.</li>
+            <li>Avoid connecting to unknown devices or networks.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/ethical-hacking/what-is-mobile-security-in-cyber-security/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- SIM -SWAP -->
+    <div class="safety-card" id="SIM-SWAP">
+        <div class="safety-icon">📵</div>
+
+        <h2>SIM-Swap Fraud</h2>
+
+        <ul>
+            <li>Set a SIM PIN if supported by your provider.</li>
+            <li>Contact your mobile provider if your SIM suddenly stops working.</li>
+            <li>Never share OTPs, PINs, or verification codes.</li>
+            <li>Use an authenticator app instead of SMS for important accounts when possible.</li>
+            <li>Ask your bank to alert you about unusual account activity.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/computer-networks/how-to-prevent-sim-swapping-in-cyber-security/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- PUBLIC WIFI -->
+    <div class="safety-card" id="public-wifi">
+        <div class="safety-icon">📡</div>
+
+        <h2>Public Wi-Fi Risks</h2>
+
+        <ul>
+            <li>Verify the network name before connecting.</li>
+            <li>Avoid banking on unsecured public Wi-Fi.</li>
+            <li>Use a VPN on untrusted networks.</li>
+            <li>Turn off automatic Wi-Fi connection.</li>
+            <li>Don't enter sensitive information on suspicious websites.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/computer-networks/risks-associated-with-public-wi-fi/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- AI SCAMS -->
+    <div class="safety-card" id="AI-scams">
+        <div class="safety-icon">🎭</div>
+
+        <h2>Deepfake & AI Scams</h2>
+
+        <ul>
+            <li>Don't automatically trust AI-generated voices or videos.</li>
+            <li>Verify unusual requests through another communication method.</li>
+            <li>Don't transfer money based only on a voice/video/message.</li>
+            <li>Cross-check important information with trusted sources.</li>
+            <li>Don't share sensitive information with unknown AI tools.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/artificial-intelligence/how-to-detect-deepfakes-using-ai/" class="more-info"> More Information →</a>
+    </div>
+
+
+    <!-- IDENTITY THREAT-->
+    <div class="safety-card" id="identity-theft">
+        <div class="safety-icon">🕵️</div>
+
+        <h2>Identity Theft</h2>
+
+        <ul>
+            <li>Use strong, unique passwords and MFA.</li>
+            <li>Don't publicly share sensitive personal information.</li>
+            <li>Monitor bank and online accounts for unusual activity.</li>
+            <li>Store identity documents securely.</li>
+            <li>Report suspected identity theft quickly.</li>
+        </ul>
+
+       <a href="https://www.geeksforgeeks.org/cybersecurity/cyber-crime-identity-theft/" class="more-info"> More Information →</a>
+    </div>
+</div>
+</body>
+</html>

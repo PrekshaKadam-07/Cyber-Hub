@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyber-Hub | Quiz</title>
+<script>
+let selectedCategory = "";
+let selectedDifficulty = "";
+
+function selectCategory(element, category) {
+
+    document.querySelectorAll(".category-option")
+        .forEach(card => {
+            card.classList.remove("selected");
+        });
+
+    element.classList.add("selected");
+    selectedCategory = category;
+}
+
+function selectDifficulty(element, difficulty) {
+
+    document.querySelectorAll(".difficulty")
+        .forEach(button => {
+            button.classList.remove("selected");
+        });
+
+    element.classList.add("selected");
+    selectedDifficulty = difficulty;
+}
+
+function startQuiz() {
+    const message =
+        document.getElementById("selection-message");
+
+    if (selectedCategory === "" ||
+        selectedDifficulty === "") {
+        message.textContent =
+            "Please select a category and difficulty level.";
+        return;
+    }
+
+    // Save the user's selection
+    localStorage.setItem(
+        "quizCategory",
+        selectedCategory
+    );
+
+    localStorage.setItem(
+        "quizDifficulty",
+        selectedDifficulty
+    );
+
+    // Open questions page
+    window.location.href = "questions.html";
+}
+</script>
+</head>
+
+<body>
+<style>
+/*=========================
+   QUIZ PAGE
+========================= */
+ body{
+    background-color: #3f3c3c;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+.quiz-hero {
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 60px auto 40px;
+    text-align: center;
+}
+
+.quiz-hero .section-label {
+    color: #e2c648;
+    margin:  0 0 10px;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+.quiz-hero h1 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: white;
+    
+}
+
+.quiz-hero > p:last-child {
+    color: #d6d6d6;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* QUIZ SETUP */
+
+.quiz-setup {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.quiz-setup h2 {
+    color: #ddc040;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.quiz-subtitle {
+    color: #cfcfcf;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.quiz-setup h3 {
+    color: white;
+    margin: 35px 0 25px;
+    font-size: 25px;
+}
+
+
+/* CATEGORY CARDS */
+
+.quiz-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.quiz-option {
+    background-color: white;
+    color: #222;
+    padding: 25px;
+    min-height: 230px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.quiz-option:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 12px 30px rgba(245,211,78,0.25);
+}
+
+.quiz-option.selected {
+    border: 3px solid #f5d34e;
+    box-shadow:
+        0 0 20px rgba(245,211,78,0.45);
+}
+
+.quiz-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.quiz-option h4 {
+    font-size: 19px;
+    margin: 10px 0;
+    
+}
+
+.quiz-option p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* DIFFICULTY */
+
+.difficulty-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.difficulty {
+    padding: 13px 25px;
+    border: none;
+    border-radius: 9px;
+    background-color: white;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.difficulty:hover {
+    transform: translateY(-3px);
+}
+
+.difficulty.selected {
+    background-color: #f5d34e;
+    box-shadow: 0 0 15px rgba(245,211,78,0.4);
+}
+
+
+/* START QUIZ */
+.start-quiz {
+    margin-top: 40px;
+    padding: 14px 30px;
+    background-color: #f5d34e;
+    color: #222;
+    border: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.start-quiz:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+#selection-message {
+    color: #f5d34e;
+    margin-top: 15px;
+}
+
+/* =========================
+   QUIZ AREA
+========================= */
+.quiz-area {
+    display: none;
+    width: 90%;
+    max-width: 850px;
+    margin: 60px auto;
+}
+.quiz-top {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* PROGRESS */
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: #444;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #f5d34e;
+    transition: width 0.4s ease;
+}
+
+/* QUESTION CARD */
+.question-card {
+    background-color: white;
+    color: #222;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.question-card h2 {
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* OPTIONS */
+.answer-option {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: #f5f5f5;
+    border: 2px solid transparent;
+    border-radius: 9px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.answer-option:hover {
+    border-color: #f5d34e;
+    background-color: #fff9d9;
+}
+.answer-option.selected {
+    border-color: #f5d34e;
+    background-color: #fff7c7;
+}
+
+/* NEXT BUTTON */
+#next-button {
+    margin-top: 20px;
+    padding: 12px 22px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#next-button:hover {
+    background-color: #f5d34e;
+    color: #222;
+}
+
+/* =========================
+   RESULT
+========================= */
+.result-area {
+    display: none;
+    width: 80%;
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 45px;
+    text-align: center;
+    background-color: white;
+    color: #222;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.result-area h2 {
+    font-size: 32px;
+    margin: 10px 0 20px;
+}
+.result-score {
+    font-size: 55px;
+    font-weight: bold;
+    color: #222;
+}
+.result-area h3 {
+    margin: 20px 0;
+}
+.result-area button {
+    padding: 12px 25px;
+    background-color: #f5d34e;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1000px) {
+    .quiz-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .quiz-hero h1 {
+        font-size: 32px;
+    }
+    .quiz-categories {
+        grid-template-columns: 1fr;
+    }
+    .difficulty-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .difficulty {
+        width: 80%;
+    }
+    .question-card {
+        padding: 25px;
+    }
+}
+</style>
+
+<header>
+
+    <div class="logo">
+        <img src="images/logo1.png">
+        
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- QUIZ HERO -->
+    <section class="quiz-hero">
+        <p class="section-label">CYBERSECURITY QUIZ</p>
+        <h1>Test Your Cybersecurity Knowledge</h1>
+        <p>
+            Challenge yourself with real-world cybersecurity questions
+            and learn how to stay safer online.
+        </p>
+    </section>
+
+
+    <!-- QUIZ SETUP -->
+    <section class="quiz-setup">
+        <h2>Choose Your Quiz</h2>
+        <p class="quiz-subtitle">
+            Select a category and difficulty level to begin.
+        </p>
+
+        <!-- CATEGORY -->
+        <h3>Choose a Category</h3>
+        <div class="quiz-categories">
+            <div class="quiz-option category-option"
+                 onclick="selectCategory(this, 'threats')">
+                <div class="quiz-icon">🎣</div>
+                <h4>Threats & Attacks</h4>
+                <p>
+                    Phishing, malware, ransomware,
+                    scams and social engineering.
+                </p>
+            </div>
+
+
+            <div class="quiz-option category-option"
+                 onclick="selectCategory(this, 'safety')">
+                <div class="quiz-icon">🔐</div>
+                <h4>Online Safety</h4>
+                <p>
+                    Passwords, MFA, safe browsing
+                    and public Wi-Fi.
+                </p>
+            </div>
+
+
+            <div class="quiz-option category-option"
+                 onclick="selectCategory(this, 'digital')">
+                <div class="quiz-icon">📱</div>
+                <h4>Digital Safety</h4>
+                <p>
+                    Mobile security, SIM-swap fraud
+                    and identity protection.
+                </p>
+            </div>
+
+
+            <div class="quiz-option category-option"
+                 onclick="selectCategory(this, 'ai')">
+                <div class="quiz-icon">🤖</div>
+                <h4>AI & Cybersecurity</h4>
+                <p>
+                    Deepfakes, AI scams and
+                    AI-powered cyber threats.
+                </p>
+            </div>
+        </div>
+
+
+        <!-- DIFFICULTY -->
+        <h3>Choose Difficulty</h3>
+        <div class="difficulty-options">
+            <button class="difficulty beginner"
+                    onclick="selectDifficulty(this, 'beginner')">
+                🟢 Beginner
+            </button>
+
+            <button class="difficulty intermediate"
+                    onclick="selectDifficulty(this, 'intermediate')">
+                🟡 Intermediate
+            </button>
+
+            <button class="difficulty advanced"
+                    onclick="selectDifficulty(this, 'advanced')">
+                🔴 Advanced
+            </button>
+        </div>
+
+
+        <!-- START BUTTON -->
+        <button class="start-quiz" onclick="startQuiz()">
+            Start Quiz →
+        </button>
+        <p id="selection-message"></p>
+    </section>
+
+
+
+  
+</main>
+
+
+</body>
+</html>

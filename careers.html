@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career In Cybersecurity</title>
+</head>
+<body>
+    <style>
+        /* =========================
+   CAREERS PAGE
+========================= */
+body{
+    background-color: #3f3c3c;
+    font-family: Arial, sans-serif;
+}
+
+/*logo*/
+header img{   
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-left: 12px;
+}
+.career-hero {
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 60px auto 40px;
+    text-align: center;
+}
+
+.section-label {
+    color: #f5d34e;
+    font-size:40px;
+    font-weight: bold;
+    
+}
+
+.career-hero h1 {
+    font-size: 25px;
+    margin: 15px 0;
+    color: white;
+}
+
+.career-hero > p:last-child {
+    color: #d6d6d6;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* CAREER SECTION */
+
+.career-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.career-section > h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+/* CAREER GRID */
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* CAREER CARD */
+
+.career-card {
+    background-color: white;
+    color: #222;
+    padding: 28px;
+    min-height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 12px 30px rgba(245, 211, 78, 0.25);
+}
+
+
+/* ICON */
+
+.career-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+
+/* CARD TITLE */
+
+.career-card h3 {
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+
+/* CARD DESCRIPTION */
+
+.career-card p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+
+/* BUTTON */
+
+.career-card button {
+    margin-top: auto;
+    padding: 11px 18px;
+    background-color: #f5d34e;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.career-card button:hover {
+    background-color: #222;
+    color: #f5d34e;
+}
+
+
+/* =========================
+   CAREER DETAILS
+========================= */
+
+.career-details {
+    display: none;
+    width: 80%;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 35px;
+    background-color: white;
+    color: #222;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.career-details h2 {
+    color: #222;
+    margin-bottom: 25px;
+}
+
+.career-details h3 {
+    margin-top: 25px;
+}
+
+.career-details li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #f5d34e;
+    color: #222;
+}
+
+
+/* =========================
+   ROADMAP
+========================= */
+
+.career-roadmap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.career-roadmap h2 {
+    color: white;
+    margin-bottom: 40px;
+}
+
+.roadmap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.roadmap-step {
+    background-color: #ffffff;
+    color: #222;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 200px;
+}
+
+.roadmap-step span {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5d34e;
+    color: #222;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.roadmap-step h3 {
+    font-size: 17px;
+}
+
+.roadmap-step p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 14px;
+}
+    </style>
+
+     <!--Logo-->
+    <header>
+
+        <div class="logo">
+            <img src="images/logo1.png" alt="Cyber-Hub Logo">
+        </div>
+
+    </header>
+
+    <main>
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="career-hero">
+        <p class="section-label">CYBERSECURITY CAREERS</p>
+        <h1>Build Your Future in Cybersecurity</h1>
+        <p>
+            Explore different career opportunities in cybersecurity,
+            discover the skills you need, and find a path that matches
+            your interests.
+        </p>
+    </section>
+
+
+    <!-- CAREER OPTIONS -->
+    <section class="career-section">
+        <h2>Explore Cybersecurity Careers</h2>
+        <div class="career-grid">
+
+            <!-- Cybersecurity Analyst -->
+            <div class="career-card">
+                <div class="career-icon">🛡️</div>
+                <h3>Cybersecurity Analyst</h3>
+                <p>
+                    Monitors systems and networks to identify,
+                    investigate and respond to security threats.
+                </p>
+                <button onclick="showCareer('analyst')">
+                    Explore Career →
+                </button>
+            </div>
+
+
+            <!-- Ethical Hacker -->
+            <div class="career-card">
+                <div class="career-icon">🕵️</div>
+                <h3>Ethical Hacker</h3>
+                <p>
+                    Tests systems and applications to discover
+                    security weaknesses before attackers can exploit them.
+                </p>
+                <button onclick="showCareer('hacker')">
+                    Explore Career →
+                </button>
+            </div>
+
+
+            <!-- Security Engineer -->
+            <div class="career-card">
+                <div class="career-icon">💻</div>
+                <h3>Security Engineer</h3>
+                <p>
+                    Designs and maintains security systems that
+                    protect networks, applications and data.
+                </p>
+                <button onclick="showCareer('engineer')">
+                    Explore Career →
+                </button>
+            </div>
+
+
+            <!-- Cloud Security -->
+            <div class="career-card">
+                <div class="career-icon">☁️</div>
+                <h3>Cloud Security Specialist</h3>
+                <p>
+                    Protects cloud-based systems, applications
+                    and data from security threats.
+                </p>
+                <button onclick="showCareer('cloud')">
+                    Explore Career →
+                </button>
+            </div>
+
+
+            <!-- Security Consultant -->
+            <div class="career-card">
+                <div class="career-icon">🔐</div>
+                <h3>Security Consultant</h3>
+                <p>
+                    Helps organizations identify security risks
+                    and develop strategies to improve protection.
+                </p>
+                <button onclick="showCareer('consultant')">
+                    Explore Career →
+                </button>
+            </div>
+
+
+            <!-- Digital Forensics -->
+            <div class="career-card">
+                <div class="career-icon">🔎</div>
+                <h3>Digital Forensics Analyst</h3>
+                <p>
+                    Investigates digital evidence to understand
+                    cyber incidents and security breaches.
+                </p>
+                <button onclick="showCareer('forensics')">
+                    Explore Career →
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CAREER DETAILS -->
+    <section id="career-details" class="career-details">
+        <h2 id="career-title"></h2>
+        <div id="career-content"></div>
+        <button class="close-btn" onclick="closeCareer()">
+            ✕ Close
+        </button>
+    </section>
+
+
+    <!-- CAREER ROADMAP -->
+    <section class="career-roadmap">
+        <p class="section-label">YOUR JOURNEY</p>
+        <h2>How to Start a Cybersecurity Career</h2>
+        <div class="roadmap">
+
+             <div class="roadmap-step">
+                <span>1</span>
+                <h3>🎓 Learn the Basics</h3>
+                <p>Understand computers, networks and cybersecurity fundamentals.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <span>2</span>
+                <h3>🌐 Learn Networking</h3>
+                <p>Build knowledge of networks, protocols, Linux and operating systems.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <span>3</span>
+                <h3>💻 Practice</h3>
+                <p>Work on labs, projects and practical cybersecurity challenges.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <span>4</span>
+                <h3>🏆 Build Your Skills</h3>
+                <p>Develop skills in areas such as ethical hacking, cloud or forensics.</p>
+            </div>
+
+            <div class="roadmap-step">
+                <span>5</span>
+                <h3>🚀 Start Your Career</h3>
+                <p>Apply your knowledge through internships, projects and entry-level roles.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<script>
+function showCareer(type) {
+
+    const details = document.getElementById("career-details");
+    const title = document.getElementById("career-title");
+    const content = document.getElementById("career-content");
+
+    details.style.display = "block";
+
+    if (type === "analyst") {
+
+        title.innerHTML = "🛡️ Cybersecurity Analyst";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Cybersecurity analysts monitor systems and networks,
+                identify suspicious activity and help organizations
+                respond to security incidents.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Networking fundamentals</li>
+                <li>Linux and operating systems</li>
+                <li>Threat detection</li>
+                <li>Security monitoring</li>
+                <li>Problem solving</li>
+            </ul>
+
+            <h3>🎯 Good For</h3>
+
+            <p>
+                Students who enjoy analyzing problems,
+                investigating suspicious activity and working
+                with security tools.
+            </p>
+        `;
+    }
+
+
+    else if (type === "hacker") {
+
+        title.innerHTML = "🕵️ Ethical Hacker";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Ethical hackers legally test systems and
+                applications to identify security weaknesses
+                before malicious attackers can exploit them.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Networking</li>
+                <li>Linux</li>
+                <li>Web security</li>
+                <li>Programming and scripting</li>
+                <li>Security testing</li>
+            </ul>
+
+            <h3>🎯 Good For</h3>
+
+            <p>
+                Students who enjoy finding vulnerabilities,
+                solving technical problems and understanding
+                how systems work.
+            </p>
+        `;
+    }
+
+
+    else if (type === "engineer") {
+
+        title.innerHTML = "💻 Cybersecurity Engineer";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Security engineers design, implement and maintain
+                security systems that protect an organization's
+                networks, applications and data.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Networking</li>
+                <li>Operating systems</li>
+                <li>Firewalls and security tools</li>
+                <li>Cloud technologies</li>
+                <li>Programming</li>
+            </ul>
+        `;
+    }
+
+
+    else if (type === "cloud") {
+
+        title.innerHTML = "☁️ Cloud Security Specialist";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Cloud security specialists protect cloud-based
+                applications, systems and data from unauthorized
+                access and cyber threats.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Cloud platforms</li>
+                <li>Networking</li>
+                <li>Identity and access management</li>
+                <li>Cloud security principles</li>
+                <li>Risk management</li>
+            </ul>
+        `;
+    }
+
+
+    else if (type === "consultant") {
+
+        title.innerHTML = "🔐 Security Consultant";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Security consultants help organizations identify
+                risks and develop strategies to improve their
+                cybersecurity.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Risk assessment</li>
+                <li>Security principles</li>
+                <li>Communication</li>
+                <li>Problem solving</li>
+                <li>Security frameworks</li>
+            </ul>
+        `;
+    }
+
+
+    else if (type === "forensics") {
+
+        title.innerHTML = "🔎 Digital Forensics Analyst";
+
+        content.innerHTML = `
+            <h3>What do they do?</h3>
+
+            <p>
+                Digital forensics analysts investigate digital
+                evidence to understand cyber incidents and
+                security breaches.
+            </p>
+
+            <h3>💻 Important Skills</h3>
+
+            <ul>
+                <li>Digital investigation</li>
+                <li>Operating systems</li>
+                <li>Evidence handling</li>
+                <li>Networking</li>
+                <li>Attention to detail</li>
+            </ul>
+        `;
+    }
+
+    details.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+function closeCareer() {
+
+    document.getElementById("career-details").style.display = "none";
+
+}
+
+</script>
+</body>
+</html>
